@@ -19,7 +19,7 @@
 ::		content1 content2 subfolder1 subfolder2
 ::
 @ECHO OFF
-IF NOT "%~2"=="" IF "%~4"=="" GOTO START
+IF NOT "%~2"=="" IF "%~3"=="" GOTO START
 ECHO( 
 ECHO This script requires 2 parameters: Docker volume name and path to directory to copy to volume
 ECHO	Example:
@@ -40,7 +40,7 @@ ECHO		content1 content2 subfolder1 subfolder2
 ECHO(
 ECHO(
 GOTO :EOF
-
+:START
 set volname=%1
 set datadir=%2
 echo %volname%
